@@ -95,4 +95,8 @@ describe('guessWord action creator call', () => {
   test('calls guessWord with input value as argument', () => {
     expect(guessWordMock).toHaveBeenCalledWith(guessedWord);
   });
+
+  test('check to see if after clicking on submit the input value is emptied', () => {
+    expect(wrapper.instance().inputBox.current.value).toBe('');
+  });
 });
